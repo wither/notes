@@ -1,12 +1,16 @@
-## wifinetic
-| Name | IP | Difficulty | OS |
-| wifinetic | 10.10.11.247 | Easy | Linux |
+## Wifinetic
 
-## Nmap
-| HOST | PORT | PROTO | SERVICE | VERSION
-| 10.10.11.247 (wifinetic.htb) | 21 | tcp | vsftpd | 3.0.3 | 
-| 10.10.11.247 (wifinetic.htb) | 22 | tcp | OpenSSH | 8.2p1 Ubuntu 4ubuntu0.9 | 
-| 10.10.11.247 (wifinetic.htb) | 53 | tcp |  |  | 
+| Name      | IP           | Difficulty | OS    |
+| --------- | ------------ | ---------- | ----- |
+| wifinetic | 10.10.11.247 | Easy       | Linux |
+
+## NMAP
+
+| HOST                         | PORT | PROTO | SERVICE | VERSION                 |
+| ---------------------------- | ---- | ----- | ------- | ----------------------- |
+| 10.10.11.247 (wifinetic.htb) | 21   | tcp   | vsftpd  | 3.0.3                   |
+| 10.10.11.247 (wifinetic.htb) | 22   | tcp   | OpenSSH | 8.2p1 Ubuntu 4ubuntu0.9 |
+| 10.10.11.247 (wifinetic.htb) | 53   | tcp   |         |                         |
 
 ## USERS
 
@@ -16,6 +20,7 @@
 - root
 
 ## NOTES
+
 - Anonymous FTP login allowed 
 ```
 | -rw-r--r--    1 ftp      ftp          4434 Jul 31 11:03 MigrateOpenWrt.txt

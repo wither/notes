@@ -2,7 +2,7 @@
 
 | Name      | IP           | Difficulty | OS    |
 | --------- | ------------ | ---------- | ----- |
-| bountyhunter | 10.10.11.237 | Easy       | Linux |
+| bountyhunter | 10.10.11.100 | Easy       | Linux |
 
 ## NMAP
 

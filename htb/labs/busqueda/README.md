@@ -42,5 +42,6 @@ Content-Type: text/html; charset=iso-8859-1
 - `full-checkup` returns error
 - list all docker instances `sudo /usr/bin/python3 /opt/scripts/system-checkup.py docker-ps`
 - inspect them revealing passwords `sudo /usr/bin/python3 /opt/scripts/system-checkup.py docker-inspect '{{json .Config}}' instanceid`
+- add `gitea.searcher.htb` to hosts login as administrator
 - in `scripts/system-checkup.py` upon the `full-checkup` command it attempts to run a script `./full-checkup.sh` which does not exist
 - create a reverse shell .sh script in `/tmp` and run `sudo /usr/bin/python3 /opt/scripts/system-checkup.py full-checkup` with a listener open

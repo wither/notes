@@ -1,6 +1,10 @@
 # Broker
 
-## Ports
+| Name      | IP           | Difficulty | OS    |
+| --------- | ------------ | ---------- | ----- |
+| broker | 10.10.11.243 | Easy       | Linux |
+
+## NMAP
 
 | HOST         | PORT | PROTO | SERVICE | VERSION                 |
 | ------------ | ---- | ----- | ------- | ----------------------- |

@@ -1,12 +1,14 @@
-## goodgames
+## GoodGames
 
-| Name | IP | Difficulty | OS |
-| goodgames | 10.10.11.130 | Linux | Easy |
+| Name      | IP           | Difficulty | OS   |
+| --------- | ------------ | ---------- | ---- |
+| goodgames | 10.10.11.130 | Linux      | Easy |
 
 ## NMAP
 
-| HOST | PORT | PROTO | SERVICE | VERSION
-| 10.10.11.130 | 80 | tcp | Apache httpd | 2.4.51 | 
+| HOST         | PORT | PROTO | SERVICE      | VERSION |
+| ------------ | ---- | ----- | ------------ | ------- |
+| 10.10.11.130 | 80   | tcp   | Apache httpd | 2.4.51  |
 
 ## HEADERS
 
@@ -42,4 +44,3 @@
 - Make bash owned by root `chown root:root bash`
 - Make bash readable and executable by augustus `chmod 4755 bash`
 - SSH back in as augustus and run `./bash -p` to spawn a shell as root
-- 

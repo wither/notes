@@ -1,8 +1,11 @@
 # Support
----
 
-# Nmap
----
+| Name      | IP           | Difficulty | OS    |
+| ------ | ------------ | ---------- | ----- |
+| support | 10.10.11.174 | Easy       | Linux |
+
+## NMAP
+
 ```
 53/tcp    open  domain        Simple DNS Plus
 88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2023-01-03 13:50:03Z)
@@ -25,8 +28,8 @@
 56220/tcp open  msrpc         Microsoft Windows RPC
 Service Info: Host: DC; OS: Windows; CPE: cpe:/o:microsoft:windows
 ```
-# Shares
----
+## SHARES
+
 ```shell
 crackmapexec smb $IP -u 'test' -p ''
 
@@ -40,9 +43,8 @@ SMB         10.10.11.174    445    DC               support-tools   READ        
 SMB         10.10.11.174    445    DC               SYSVOL                          Logon server share
 ```
 
-# Notes
----
+## NOTES
+
 - Domain: support.htb
 - support-tools share is readable
 - UserInfo.exe.zip suspicious
-- 

